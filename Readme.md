@@ -27,8 +27,8 @@ This project depends on two external packages:
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone <repository_url>
-cd <project_directory>
+git clone https://github.com/morphkurt/letters-and-numbers.git
+cd letters-and-numbers
 ```
 
 You can run the program via the terminal using the following commands:
