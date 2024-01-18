@@ -10,6 +10,7 @@ This is a Go program that solves the popular game show puzzle, [Countdown](https
 
 ## Prerequisites
 
+
 Before running this application, ensure you have Go installed on your local machine.
 
 ## Dependencies
