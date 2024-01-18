@@ -1,29 +1,46 @@
-# Word Finder in Go
+# Countdown Puzzle Solver
 
-This repository contains a command-line Go application that helps in finding words.
+This is a Go program that solves the popular game show puzzle, [Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show)) and French version [Des chiffres et des lettres](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). It can solve both the letter and number games. 
 
-## Overview
+## Prerequisites
 
-This application parses a text file that contains a list of words and finds words that can be formed from the given input string. The application is case-sensitive and doesn't allow characters that aren't present in the input string. 
+Before running this application, ensure you have Go installed on your local machine.
 
-The result returns all the possible words that can be formed in the descending order of their lengths. If a word is present in the text file and is creatable from the input string, it will be included in the result. In case no words are found, generic message conveying the same will be printed.
+## Dependencies
 
-## Files and Functions
+This project depends on two external packages:
 
-The main file is `main.go`, which consists of `main` function, the `FindWord` function that finds all possible words from the input string.
-
-The `readFile` function reads a text file that contains a list of words and converts its contents to a string. The path to the text file is hardcoded as `words/words.txt`.
+- `github.com/morphkurt/letters-and-numbers/letters` - This package is used to process the letters segment of the countdown game.
+  
+- `github.com/morphkurt/letters-and-numbers/numbers` - This package is used to process the numbers segment of the countdown game.
 
 ## Usage
 
-You can run the application using the following command:
+Clone the repository and navigate to the project directory:
 
-    go run main.go <your_word>
+```bash
+git clone <repository_url>
+cd <project_directory>
+```
 
-Replace `<your_word>` with your input string.
+You can run the program via the terminal using the following commands:
 
-For instance:
+For the letters game:
 
-    go run main.go hello
+```bash
+go run main.go -l abcdefgh words/words.txt
+```
 
-This will display all the words that can be formed from the string 'hello' and are present in the words.txt file.
+For the numbers game:
+
+```bash
+go run main.go -n 1,2,3,4,5,6 356
+```
+
+## Commands
+
+The `-l` command is used to solve the letters game of the countdown. It takes a string of random letters as its first argument, and a file path to a dictionary of words as its second argument. It tries to form a word from the given letters with reference to the supplied dictionary file.
+
+The `-n` command is used to solve the numbers game of Countdown. It takes two arguments, the first is a list of comma-separated numbers, and the second is a target number. The program tries to combine the given numbers through various mathematical operations to reach the target number.
+
+Please note that when either of the commands are not supplied correctly, the program will provide a usage guide and terminate.
