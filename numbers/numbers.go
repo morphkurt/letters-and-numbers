@@ -41,7 +41,7 @@ func (h *queue) Pop() interface{} {
 	return x
 }
 
-var op = []func(int, int) (int, rune){add, substract, divide, multiply}
+var op = []func(int, int) (int, rune){add, subtract, divide, multiply}
 
 func Solve(c []int, s int) (int, string) {
 	h := &queue{}
@@ -99,7 +99,7 @@ func add(a, b int) (int, rune) {
 	return a + b, '+'
 }
 
-func substract(a, b int) (int, rune) {
+func subtract(a, b int) (int, rune) {
 	return a - b, '-'
 }
 
