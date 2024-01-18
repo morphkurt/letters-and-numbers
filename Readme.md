@@ -3,7 +3,10 @@
 
 # Countdown Puzzle Solver
 
-This is a Go program that solves the popular game show puzzle, [Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show)) and French version [Des chiffres et des lettres](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). It can solve both the letter and number games. 
+![Logo_Des_chiffres_et_des_lettres_2016](https://github.com/morphkurt/letters-and-numbers/assets/20348847/daf32822-c6df-4fe5-bff0-67883e7f1de2)
+
+
+This is a Go program that solves the popular game show puzzle, [Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show)) / French version [Des chiffres et des lettres](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres) and Letters and Numbers Australian version. It can solve both the letter and number games. 
 
 ## Prerequisites
 
@@ -32,12 +35,15 @@ For the letters game:
 
 ```bash
 go run main.go -l abcdefgh words/words.txt
+Found 1 words with 9 letters of length
+1: countdown
 ```
 
 For the numbers game:
 
 ```bash
 go run main.go -n 1,2,3,4,5,6 356
+Target 356 reached with the solve 6*5*3-1*4
 ```
 
 ## Commands
