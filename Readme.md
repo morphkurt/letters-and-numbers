@@ -1,3 +1,4 @@
+[![Test Coverage](https://raw.githubusercontent.com/wiki/morphkurt/letters-and-numbers/coverage.svg)](https://raw.githack.com/wiki/morphkurt/letters-and-numbers/coverage.html)
 ![CI](https://github.com/morphkurt/letters-and-numbers/actions/workflows/go.yml/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/morphkurt/letters-and-numbers)](https://goreportcard.com/report/github.com/morphkurt/letters-and-numbers)
 
