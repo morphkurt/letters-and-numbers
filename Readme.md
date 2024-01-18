@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/morphkurt/letters-and-numbers)](https://goreportcard.com/report/github.com/morphkurt/letters-and-numbers)
+
 # Countdown Puzzle Solver
 
 This is a Go program that solves the popular game show puzzle, [Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show)) and French version [Des chiffres et des lettres](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). It can solve both the letter and number games. 
