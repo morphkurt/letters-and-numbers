@@ -1,25 +1,28 @@
 package letters
 
 import (
-	"fmt"
+	"errors"
 	"os"
 	"sort"
 	"strings"
 )
 
-func readFile(f string) string {
+func readFile(f string) (string, error) {
 	b, err := os.ReadFile(f) // just pass the file name
 	if err != nil {
-		fmt.Print(err)
+		return "", err
 	}
 	str := string(b) // convert content to a 'string'
-	return str
+	return str, nil
 }
 
-func FindWord(word, f string) []string {
+func FindWord(word, f string) ([]string, error) {
 	out := []string{}
 	result := []string{}
-	s := readFile(f)
+	s, err := readFile(f)
+	if err != nil {
+		return out, errors.New("dictonoary file doesn't exists")
+	}
 	lines := strings.Split(s, "\r\n")
 	for _, w := range lines {
 		m := copyMap(word)
@@ -49,7 +52,7 @@ func FindWord(word, f string) []string {
 			result = append(result, w)
 		}
 	}
-	return result
+	return result, nil
 }
 
 func copyMap(word string) map[rune]int {
